@@ -20,6 +20,7 @@ $difference = $daysCalc->format($dateFormat);
     <h1>Exercice 6</h1>
     <p>Afficher le nombre de jour dans le mois de février de l'année 2016.</p>
     <p><?= $difference . ' jours' ?></p>
+    <p><?= cal_days_in_month(CAL_GREGORIAN, 2, 2016) . ' jours' ?></p>
     
 </body>
 </html>

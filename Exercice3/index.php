@@ -2,7 +2,7 @@
 
 $today = date('l j F Y');
 
-setlocale(LC_TIME, 'fr');
+setlocale(LC_TIME, 'fra.utf8');
 $aujourdhui = strftime('%A %e %B %Y');
 
 ?>

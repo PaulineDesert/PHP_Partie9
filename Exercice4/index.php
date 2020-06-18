@@ -1,8 +1,9 @@
 <?php
 
-setlocale(LC_TIME, 'fr');
-$aujourdhui = strftime('%A %e %B %Y à %Hh%M');
-$previous = utf8_encode(strftime('%A %e %B %Y' . utf8_decode(' à ') . '%Hh%M', mktime(15, 00, 0, 8, 2, 2016)));
+setlocale(LC_TIME, 'fra.utf8');
+$aujourdhui = new DateTime();
+$previous = DateTime::createFromFormat('d-m-Y H:i:s', '2-08-2016 15:00:00');
+// strftime('%A %e %B %Y à %Hh%M', mktime(15, 00, 0, 8, 2, 2016));
 
 ?>
 
@@ -17,8 +18,8 @@ $previous = utf8_encode(strftime('%A %e %B %Y' . utf8_decode(' à ') . '%Hh%M', 
     <h1>Exercice 4</h1>
     <p>Afficher le timestamp du jour.  
     Afficher le timestamp du mardi 2 août 2016 à 15h00.</p>
-    <p><?= $aujourdhui ?></p>
-    <p><?= $previous ?></p>
+    <p><?= $aujourdhui->getTimestamp() ?></p>
+    <p><?= $previous->getTimestamp() ?></p>
     
 </body>
 </html>
